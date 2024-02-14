@@ -1,0 +1,161 @@
+:root {
+  --iris: #4d5ae5;
+  --ocean: #404bbf;
+  --navy-blue: #2e2f42;
+  --green: #31d0aa;
+  --slate: #434455;
+  --light-slate: #8e8f99;
+  --cornflower: #e7e9fc;
+  --cloud: #f4f4fd;
+  --navy-blue-modal: rgba(46, 47, 66, 0.4);
+  --grey: rgba(46, 47, 66, 0.7);
+  --white: #fff;
+  --dairy: #fcfcfc;
+}
+
+/* #region Base */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var();
+}
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+button {
+  color: currentColor;
+  cursor: pointer;
+}
+address {
+  font-style: normal;
+}
+/* #ensregion Base */
+/* #region Common */
+.features-title,
+.tasks-title,
+.team-title {
+}
+
+/* Logo */
+.logo {
+}
+.logo-dark {
+}
+.logo-light {
+}
+/* Buttons */
+
+/* Filters btn */
+.filters {
+}
+.filters-item {
+}
+.filters-btn {
+}
+/* #endregion Common */
+/* #region Header */
+.header {
+}
+.header-nav {
+}
+.nav {
+}
+.nav-menu {
+}
+.nav-menu-item {
+}
+.nav-menu-link {
+}
+.header-contacts {
+}
+.contacts {
+}
+.contacts-list {
+}
+.contacts-item {
+}
+.contacts-link {
+}
+/* #endregion Header */
+/* #region Hero */
+.hero {
+}
+.hero-title {
+}
+.btn {
+}
+/* #endregion Hero */
+/* #region Features */
+.features {
+}
+.features-title {
+}
+.features-list {
+}
+.features-item {
+}
+.features-caption {
+}
+.features-desc {
+}
+/* #endregion Features */
+/* #region Tasks */
+.tasks {
+}
+.tasks-title {
+}
+.tasks-list {
+}
+.tasks-item {
+}
+.tasks-ill {
+}
+/* #endregion Tasks */
+/* #region Team */
+.team {
+}
+.team-title {
+}
+.team-list {
+}
+.team-item {
+}
+.team-avatar {
+}
+.team-member {
+}
+.team-postion {
+}
+/* #endregion Team */
+/* #region Footer */
+.footer {
+}
+.footer-logo {
+}
+.footer-slogan {
+}
+/* #endregion Footer */
+/* #region Portfolio */
+.portfolio {
+}
+.portfolio-title {
+}
+.portfolio-filters {
+}
+.portfolio-gallery {
+}
+.gallery {
+}
+.gallery-item {
+}
+.gallery-ill {
+}
+.gallery-caption {
+}
+.gallery-desc {
+}
+/* #endregion Portfolio */
