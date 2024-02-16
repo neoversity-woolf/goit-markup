@@ -19,6 +19,10 @@
 
   --system-100: #31d0aa;
   /* Others */
+  --radius-sm: 4px;
+  --items: 3;
+  --indent-x: 48px;
+  --indent-y: 24px;
 }
 
 /* #region Base */
@@ -27,6 +31,16 @@ body {
   color: var(--main-200);
   background: var(--light-100);
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 a {
   text-decoration: none;
   color: currentColor;
@@ -34,20 +48,61 @@ a {
 ul,
 ol {
   list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 button {
+  padding: 0;
   font-family: inherit;
   color: currentColor;
+  border: none;
   cursor: pointer;
 }
 address {
   font-style: normal;
 }
-/* #ensregion Base */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* #endregion Base */
+/* #region Card set */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent-x) var(--indent-y);
+}
+.cards-item {
+  width: calc((100% - var(--indent-y) * (var(--items) - 1)) / var(--items));
+}
+/* #endregion */
 /* #region Common */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+}
+.section {
+  padding: 120px 0;
+}
+.container {
+  width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
 .features-title,
 .tasks-title,
 .team-title {
+  margin-bottom: 72px;
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
@@ -74,11 +129,16 @@ address {
 }
 /* Buttons */
 .btn {
+  display: flex;
+  min-width: 169px;
+  min-height: 56px;
+  padding: 16px 32px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--light-100);
   background: var(--accent-100);
+  border-radius: var(--radius-sm);
 }
 .btn:hover,
 .btn:focus {
@@ -90,11 +150,13 @@ address {
 .filters-item {
 }
 .filters-btn {
+  padding: 12px 24px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--accent-100);
   background: var(--light-300);
+  border-radius: var(--radius-sm);
 }
 .filters-btn:hover,
 .filters-btn:focus {
@@ -104,16 +166,28 @@ address {
 /* #endregion Common */
 /* #region Header */
 .header {
+  border-bottom: 1px solid var(--light-400);
+}
+.header .container {
+  display: flex;
+  align-items: center;
 }
 .header-nav {
+  display: flex;
+  align-items: center;
+  gap: 76px;
 }
 .nav {
 }
 .nav-menu {
+  display: flex;
+  gap: 40px;
 }
 .nav-menu-item {
 }
 .nav-menu-link {
+  display: block;
+  padding: 24px 0;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -123,10 +197,13 @@ address {
   color: var(--accent-200);
 }
 .header-contacts {
+  margin-left: auto;
 }
 .contacts {
 }
 .contacts-list {
+  display: flex;
+  gap: 40px;
 }
 .contacts-item {
 }
@@ -142,24 +219,33 @@ address {
 /* #endregion Header */
 /* #region Hero */
 .hero {
+  padding: 188px 0;
   background: var(--main-100);
 }
 .hero-title {
+  max-width: 496px;
+  margin: 0 auto 48px auto;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
 }
+.hero-btn {
+  margin: 0 auto;
+}
 /* #endregion Hero */
 /* #region Features */
 .features {
+  padding-bottom: 60px;
 }
 .features-list {
+  --items: 4;
 }
 .features-item {
 }
 .features-caption {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -173,6 +259,9 @@ address {
 /* #endregion Features */
 /* #region Tasks */
 .tasks {
+  padding-top: 60px;
+}
+.tasks-title {
 }
 .tasks-list {
 }
@@ -185,9 +274,17 @@ address {
 .team {
   background: var(--light-300);
 }
+.team-title {
+}
 .team-list {
+  --items: 4;
 }
 .team-item {
+  background: var(--light-100);
+  border-radius: 0 0 4px 4px;
+}
+.team-wrapper {
+  padding: 32px 16px;
 }
 .team-avatar {
 }
@@ -207,9 +304,15 @@ address {
 /* #endregion Team */
 /* #region Footer */
 .footer {
+  padding: 100px 0;
   background: var(--main-100);
 }
+.footer-left {
+  max-width: 264px;
+}
 .footer-logo {
+  display: block;
+  margin-bottom: 16px;
 }
 .footer-slogan {
   line-height: 1.5;
@@ -219,8 +322,14 @@ address {
 /* #endregion Footer */
 /* #region Portfolio */
 .portfolio {
+  padding-top: 96px;
 }
 .portfolio-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 72px;
 }
 .portfolio-gallery {
 }
@@ -230,7 +339,13 @@ address {
 }
 .gallery-ill {
 }
+.portfolio-wrapper {
+  padding: 32px 16px;
+  border: 1px solid var(--light-400);
+  border-top: none;
+}
 .gallery-caption {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
