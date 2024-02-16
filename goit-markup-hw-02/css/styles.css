@@ -1,22 +1,31 @@
 :root {
-  --iris: #4d5ae5;
-  --ocean: #404bbf;
-  --navy-blue: #2e2f42;
-  --green: #31d0aa;
-  --slate: #434455;
-  --light-slate: #8e8f99;
-  --cornflower: #e7e9fc;
-  --cloud: #f4f4fd;
-  --navy-blue-modal: rgba(46, 47, 66, 0.4);
-  --grey: rgba(46, 47, 66, 0.7);
-  --white: #fff;
-  --dairy: #fcfcfc;
+  /* Fonts */
+  --primary-font: 'Roboto', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+  /* Colors */
+  --accent-100: #4d5ae5;
+  --accent-200: #404bbf;
+
+  --main-100: #2e2f42;
+  --main-200: #434455;
+  --main-300: #8e8f99;
+  --main-400: rgba(46, 47, 66, 0.4);
+  --main-500: rgba(46, 47, 66, 0.7);
+
+  --light-100: #fff;
+  --light-200: #fcfcfc;
+  --light-300: #f4f4fd;
+  --light-400: #e7e9fc;
+
+  --system-100: #31d0aa;
+  /* Others */
 }
 
 /* #region Base */
 body {
-  font-family: 'Roboto', sans-serif;
-  color: var();
+  font-family: var(--primary-font);
+  color: var(--main-200);
+  background: var(--light-100);
 }
 a {
   text-decoration: none;
@@ -27,6 +36,7 @@ ol {
   list-style-type: none;
 }
 button {
+  font-family: inherit;
   color: currentColor;
   cursor: pointer;
 }
@@ -38,23 +48,58 @@ address {
 .features-title,
 .tasks-title,
 .team-title {
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--main-100);
 }
 
 /* Logo */
 .logo {
+  font-family: var(--secondary-font);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent-100);
 }
 .logo-dark {
+  color: var(--main-100);
 }
 .logo-light {
+  color: var(--light-300);
 }
 /* Buttons */
-
+.btn {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--light-100);
+  background: var(--accent-100);
+}
+.btn:hover,
+.btn:focus {
+  background: var(--accent-200);
+}
 /* Filters btn */
 .filters {
 }
 .filters-item {
 }
 .filters-btn {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--accent-100);
+  background: var(--light-300);
+}
+.filters-btn:hover,
+.filters-btn:focus {
+  color: var(--light-100);
+  background: var(--accent-200);
 }
 /* #endregion Common */
 /* #region Header */
@@ -69,6 +114,13 @@ address {
 .nav-menu-item {
 }
 .nav-menu-link {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.nav-menu-link:hover,
+.nav-menu-link:focus {
+  color: var(--accent-200);
 }
 .header-contacts {
 }
@@ -79,28 +131,44 @@ address {
 .contacts-item {
 }
 .contacts-link {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--main-200);
+}
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--accent-200);
 }
 /* #endregion Header */
 /* #region Hero */
 .hero {
+  background: var(--main-100);
 }
 .hero-title {
-}
-.btn {
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
 }
 /* #endregion Hero */
 /* #region Features */
 .features {
-}
-.features-title {
 }
 .features-list {
 }
 .features-item {
 }
 .features-caption {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--main-100);
 }
 .features-desc {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 /* #endregion Features */
 /* #region Tasks */
@@ -127,16 +195,29 @@ address {
 .team-avatar {
 }
 .team-member {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--main-100);
 }
 .team-postion {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 /* #endregion Team */
 /* #region Footer */
 .footer {
+  background: var(--main-100);
 }
 .footer-logo {
 }
 .footer-slogan {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--light-300);
 }
 /* #endregion Footer */
 /* #region Portfolio */
@@ -155,7 +236,14 @@ address {
 .gallery-ill {
 }
 .gallery-caption {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--main-100);
 }
 .gallery-desc {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 /* #endregion Portfolio */
